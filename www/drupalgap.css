@@ -1,0 +1,118 @@
+
+#title {
+  padding: 0 0 0 40px;
+}
+
+#buttonlist {
+  float: left;
+}
+
+#rightbar {
+  float: right;
+}
+
+
+.rounded {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 4px 2px 4px;
+  margin: 0px 0 5px 4px;
+  height: 17px;
+  -webkit-border-radius: 4px;
+}
+
+.left {
+  float: left;
+}
+
+.textround {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 4px 2px 4px;
+  background: none;
+  height: 17px;
+  -webkit-border-radius: 4px;
+}
+
+.arearound {
+  float: left;
+  clear: both;
+  margin: 2px 0 5px 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 4px 2px 4px;
+  background: none;
+  clear: both;
+}
+
+#storytext {
+  float: left;
+  clear: both;
+  margin: 4px 0px 4px 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 4px 2px 4px;
+  background: none;
+  height: 17px;
+  -webkit-border-radius: 4px;
+}
+
+.row {
+  flaot: left;
+  clear: both;
+}
+
+#storytitle {
+  margin-left: 10px;
+  width: 200px;
+}
+
+
+#stitle,#storytext {
+  width: 40px;
+}
+
+#intro,.box,.views-row , #infodiv, #sentmessage , #cleardata {
+  float: left;
+  clear: both;
+  margin: 2px 0 5px 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 4px 2px 4px;
+  background: none;
+  clear: both;
+  margin: 3px 8px 5px 8px;
+  -webkit-border-radius: 4px;
+}
+
+#addcontrol {clear:both;}
+
+
+
+.views-field-title {
+  font-weight: 700;
+  padding: 5px 5px 8px 0px;
+}
+
+.field-content {
+  padding: 5px 5px 5px 0px;
+}
+.activitylist div
+{
+  float:left;
+  padding: 5px 5px 5px 0px;
+}
+.center
+{
+  text-align:center;
+  display:block;
+}
+
+.bleft {
+  float:left;
+  padding:8px 0 10px 7px;
+}
+
+.views-ui-edit, .node-delete, .node-edit {
+  display:none;
+}

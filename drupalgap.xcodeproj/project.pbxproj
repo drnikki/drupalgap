@@ -38,6 +38,7 @@
 		A118731015291768001390E3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A118730F15291768001390E3 /* MainViewController.m */; };
 		A118731215291768001390E3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A118731115291768001390E3 /* MainViewController.xib */; };
 		A118731615291768001390E3 /* verify.sh in Resources */ = {isa = PBXBuildFile; fileRef = A118731515291768001390E3 /* verify.sh */; };
+		A118731D152917B7001390E3 /* www in Resources */ = {isa = PBXBuildFile; fileRef = A118731C152917B7001390E3 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,9 +56,9 @@
 		A11872D815291768001390E3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A11872DA15291768001390E3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A11872DC15291768001390E3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		A11872E015291768001390E3 /* drupalgap-Info.plist */ = {isa = PBXFileReference; path = "drupalgap-Info.plist"; sourceTree = "<group>"; };
+		A11872E015291768001390E3 /* drupalgap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "drupalgap-Info.plist"; sourceTree = "<group>"; };
 		A11872E215291768001390E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A11872E415291768001390E3 /* drupalgap-Prefix.pch */ = {isa = PBXFileReference; path = "drupalgap-Prefix.pch"; sourceTree = "<group>"; };
+		A11872E415291768001390E3 /* drupalgap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "drupalgap-Prefix.pch"; sourceTree = "<group>"; };
 		A11872E515291768001390E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A11872E715291768001390E3 /* Cordova.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cordova.framework; path = /Users/Shared/Cordova/Frameworks/Cordova.framework; sourceTree = "<absolute>"; };
 		A11872EC15291768001390E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -71,13 +72,14 @@
 		A118730415291768001390E3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		A118730615291768001390E3 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		A118730815291768001390E3 /* Cordova.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cordova.plist; sourceTree = "<group>"; };
-		A118730B15291768001390E3 /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		A118730B15291768001390E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		A118730C15291768001390E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		A118730E15291768001390E3 /* MainViewController.h */ = {isa = PBXFileReference; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
+		A118730E15291768001390E3 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
 		A118730F15291768001390E3 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
 		A118731115291768001390E3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
-		A118731415291768001390E3 /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		A118731415291768001390E3 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		A118731515291768001390E3 /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
+		A118731C152917B7001390E3 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		A11872B215291767001390E3 = {
 			isa = PBXGroup;
 			children = (
+				A118731C152917B7001390E3 /* www */,
 				A11872DE15291768001390E3 /* drupalgap */,
 				A11872C315291768001390E3 /* Frameworks */,
 				A11872C115291768001390E3 /* Products */,
@@ -326,6 +329,7 @@
 				A118730915291768001390E3 /* Cordova.plist in Resources */,
 				A118731215291768001390E3 /* MainViewController.xib in Resources */,
 				A118731615291768001390E3 /* verify.sh in Resources */,
+				A118731D152917B7001390E3 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

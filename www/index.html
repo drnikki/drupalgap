@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <title>DrupalGap</title>
+    <link rel="stylesheet" href="jquery.mobile-1.0b2.min.css" />
+    <link rel="stylesheet" href="drupalgap.css" />
+    <script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.0b2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
+    <script type="text/javascript" src="base.js"></script>
+  </head>
+  <body onload="onBodyLoad()">
+    
+    <!-- Start of loading page -->
+    <div data-role="page" id="loading">
+      <div data-role="header" data-id="bhead" data-theme="e">
+        <h1>Loading</h1>
+        <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+        <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+      </div>
+      <!-- /header -->
+      <div data-role="content">
+        <div class="ui-body ui-body-c">
+          <p>
+            <strong>Welcome to DrupalGap</strong>
+          </p>
+          <p>
+            Loading 
+          </p>
+        </div>
+      </div>
+      <!-- /content -->
+      <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="e">
+        <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+        <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page -->
+    
+    <!-- Start of home page -->
+    <div data-role="page" id="home">
+      <div data-role="header" data-position="fixed" data-id="bhead" data-theme="e">
+        <h1>Home</h1>
+        <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+        <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+      </div>
+      <!-- /header -->
+      <div data-role="content" class="ui-content">
+        <div class="ui-body ui-body-c">
+          <p>
+            Welcome to adappt.co.uk DrupalGap. You can find upload content to your Drupal site and Downlaod the latest content.
+          </p>
+          <ul data-role="listview" data-inset="true" data-theme="e">
+            <li>
+              <a onClick="how();">Getting started</a>
+            </li>
+            <li>
+              <a onClick="addStory();">Upload an article</a>
+            </li>
+            <li>
+              <a onClick="listArticles();">View articles</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- /content -->
+      <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="e">
+        <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+        
+        <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page -->
+    
+    <!-- Start of How It Works page -->
+    <div data-role="page" id="howitworks">
+      <div data-role="header" data-id="bhead" data-theme="e">
+        <h1>How It Works</h1>
+        <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+        <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+      </div>
+      <!-- /header -->
+      <div data-role="content">
+        <div class="ui-body ui-body-c">
+          <p>
+            <strong>Welcome to DrupalGap</strong>
+          </p>
+          <p>
+            Welcome to DrupalGap
+          </p>
+          <p>
+            With this app you can upload stories from your mobile to your drupal site.
+          </p>
+          <p>
+            <strong>Quick step guide to getting started</strong>
+          </p>
+          <p>
+            1. Install the phone gap drupal module on your Drupal site
+            <br/>
+            2. Enable the module and make sure your user has permissions to create content from mobile
+            <br/>
+            3. Enable the views module and for a default view you can enable the frontpage view
+            <br/>
+            4. Go to settings (below). Enter the URL of your site, the name of the view to dislay content and the name of the views display 
+            <br/>
+            5. When you go to the upload content area you will be promted to enter your username and password, which you must do before continuing.
+            <br/>
+            6. Go to the Upload and article page and submit your article
+          </p>
+        </div>
+      </div>
+      <!-- /content -->
+      <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="e">
+        <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+        
+        <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page -->
+    
+    <!-- Start of Login page -->
+    <div data-role="page" id="login">
+      <div data-role="header" data-id="bhead" data-theme="e">
+        <h1>Login to Drupal</h1>
+        <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+        <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+      </div>
+      <!-- /header -->
+      <div data-role="content" class="ui-content">
+        <div class="ui-body ui-body-c">
+          <p>
+           You must first register at your Drupal site. Once you have your username and password, return to this page and save your details in the box below.
+          </p>
+          <p>
+            Please enter your Drupal username <input id="username" type="text">
+            </input>
+          </p>
+          <p>
+            Please enter your Drupal password <input id="password" type="password">
+            </input>
+          </p>
+          <div id="logmsg">
+          </div>
+          <p>
+            <a data-role="button" onclick="saveLogin();" data-theme="e">Login</a>
+          </p>
+        </div>
+      </div>
+      <!-- /content -->
+      <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="e">
+        <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+        
+        <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page -->
+    
+  
+    <!-- Start of articles page -->
+    <div data-role="page" id="stories">
+      <div data-role="header" data-id="bhead" data-theme="e">
+        <h1>Latest Articles</h1>
+        <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+        <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+      </div>
+      <!-- /header -->
+      <div id = "latestlist" data-role="content">
+      </div>
+      <!-- /content -->
+      <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="e">
+        <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+        <a id="footout" onMouseDown="Account();" data-role="button" data-icon="delete">Account</a>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page -->
+    
+    <!-- Start of add Articles page -->
+    <div data-role="page" id="addstory">
+      <div data-role="header" data-id="bhead" data-theme="e">
+        <h1>Add Article</h1>
+        <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+        <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+      </div>
+      <!-- /header -->
+      <div id = "addstorydiv" data-role="content">
+        <div id = "stitle" class="rounded left">
+          title
+        </div>
+        <input id ="storytitle" type="text" class="textround" name="storytitle" />
+        <br/>
+        <textarea id="story" class="arearound" style="overflow-y:scroll;" NAME="story" COLS=45 ROWS=8 ></textarea>
+        <br/>
+        <div id="result">
+        </div>
+        <br />
+        <div id="addcontrol" data-role="controlgroup" data-type="horizontal" data-theme="e">
+        </a><a data-role="button" data-theme="e" onclick="sendStory();"/>Send
+      </a>
+    </div>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed" data-id="bfoot" data-theme="e">
+      <h4>DrupalGap</h4>
+    </div>
+    <!-- /footer -->
+  </div>
+  <!-- /page -->
+  
+  <!-- Start of info page -->
+  <div data-role="page" id="info">
+    <div data-role="header" data-id="bhead" data-theme="e">
+      <h1>Info</h1>
+      <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+      <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+      <div class="ui-body ui-body-c">
+        <p>
+          This project and code is supplied under GPL license without any guarantees
+        </p>
+        <p>
+          The aim is to support two great initiatives: Drupal and Phonegap
+        </p>
+        <p>
+          For more information go to <a href='http://www.aeondada.com/drupalgap'>www.aeondada.com</a>
+          <br/>
+        </p>
+      </div>
+    </div>
+    <!-- /content -->
+    <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="e">
+      <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+      
+      <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+    </div>
+    <!-- /footer -->
+  </div>
+  <!-- /page -->
+  
+  <!-- Start of settings page -->
+  <div data-role="page" id="settings">
+    <div data-role="header" data-id="bhead" data-theme="e">
+      <h1>Settings</h1>
+      <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+      <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+      <div class="ui-body ui-body-c">
+       Enter URL of your Drupal site e.g.
+       <br /><strong>http://www.mydrupalsite.com</strong>
+       <br />(no trailing forward slash / ) 
+        <br/>
+        <input id="baseurl" type="text">
+            </input>
+        <br/>
+               Enter 'view' used for retreiving articles e.g. <strong>frontpage</strong> (you must enable this view if you want o use it from with Drupal)
+        <br/>
+        <input id="view" type="text">
+            </input>
+        <br/>
+               Enter the view 'display' you want to use for lsiting articles e.g. <strong>page</strong>
+        <br/>
+        <input id="view_display" type="text">
+            </input>
+        <br/>
+        <a data-role="button" data-theme="e" onclick="saveSettings();">Save settings</a>
+      </div>
+    </div>
+    <!-- /content -->
+
+  </div>
+  <!-- /page -->
+  
+  <!-- Start of sending page -->
+  <div data-role="page" id="sending">
+    <div data-role="header" data-id="bhead" data-theme="e">
+      <h1>Sending Story</h1>
+      <a href="#home" data-icon="home" data-direction="reverse" class="ui-btn-left jqm-home">Home</a>
+      <a href="#info" data-icon="info" class="ui-btn-right">Info</a>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+      <div class="ui-body ui-body-c">
+        <div id="sentmessage">
+          your story is being sent. If this message does not disappear in 2 minutes, please check your connection and try again.
+        </div>
+        <br/>
+        <div id="storylist">
+        </div>
+      </div>
+    </div>
+    <!-- /content -->
+    <div data-role="footer" data-position="fixed" data-id="bfoot" class="ui-bar" data-theme="e">
+      <a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
+      <a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+    </div>
+    <!-- /footer -->
+  </div>
+  <!-- /page -->
+  </body>
+</html>
